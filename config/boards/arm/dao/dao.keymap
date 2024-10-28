@@ -12,6 +12,11 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define LA4 4
+#define LA5 5
+#define LA6 6
+#define LA7 7
+#define LA8 8
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -53,6 +58,46 @@
                         >;
                 };
                 adjust_layer {
+                        bindings = <
+ &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset        &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
+                my_layer_4 {
+                        bindings = <
+ &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset        &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
+                my_layer_5 {
+                        bindings = <
+ &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset        &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
+                my_layer_6 {
+                        bindings = <
+ &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset        &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
+                my_layer_7 {
+                        bindings = <
+ &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+ &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
+ &sys_reset        &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
+                                             &trans         &none          &trans         &trans         &none          &trans
+                        >;
+                };
+                my_layer_8 {
                         bindings = <
  &bootloader   &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
  &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
