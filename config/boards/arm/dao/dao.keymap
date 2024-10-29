@@ -2,7 +2,7 @@
  * Copyright (c) 2021 Rafael Yumagulov
  *
  * SPDX-License-Identifier: MIT
- * TODO: В найти цифры от numpad
+ * TODO: Клики мыши не сработали почему то - &mkp LCLK   &mkp RCLK
  */
 
 #include <behaviors.dtsi>
@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
+#define LA1 1
+#define LA2 2
+#define LA3 3
 #define LA4 4
 #define LA5 5
 #define LA6 6
@@ -35,74 +35,74 @@
 
                 default_layer {
                         bindings = <
-          &kp TAB            &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y         &kp U            &kp I         &kp O     &kp P      &kp LBKT
-          &kp LSHFT          &lt LA4 A    &lt ADJ S    &lt RSE D    &lt LWR F    &kp G         &kp H         &kp J            &kp K         &kp L     &kp SEMI   &mt RCTRL SQT
-          &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B         &kp N   &mt LSHFT M    &mt LALT COMMA    &mt LCTRL DOT   &mt LGUI FSLH   &mt RALT BSLH
+          &kp TAB            &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y   &kp U          &kp I             &kp O           &kp P           &kp LBKT
+          &kp LSHFT          &lt LA4 A    &lt LA3 S    &lt LA2 D    &lt LA1 F    &kp G         &kp H   &kp J          &kp K             &lt LA7 L       &lt LA6 SEMI    &mt RCTRL SQT
+          &mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B         &kp N   &mt LSHFT M    &mt LALT COMMA    &mt LCTRL DOT   &mt LGUI FSLH   &mt RALT BSLH
                                                    &kp ESC   &lt LA5 ENTER   &kp LGUI               &kp SPACE   &kp RIGHT_BRACKET    &kp BSPC
                         >;
                 };
-                lower_layer {
+                my_layer_1 {
                         bindings = <
-          &mt LGUI F1      &kp F2     &kp F3   &kp F4        &kp F5     &kp F6      &kp F7      &kp F8     &kp F9        &kp F10    &kp F11    &kp F12           
-          &mt LCTRL PLUS   &kp EXCL   &kp AT   &kp HASH      &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS   &kp STAR      &kp LPAR   &kp RPAR   &mt RCTRL MINUS
-          &mt LALT EQUAL   &kp N1     &kp N2   &kp N3        &kp N4     &kp N5      &kp N6      &kp N7     &kp N8        &kp N9     &kp N0     &kp RALT
-                                               &lt ADJ TAB   &trans     &trans      &trans      &trans     &lt ADJ DEL
+          &none       &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LBRC    &kp RBRC    &kp ASTRK   &none
+          &kp LSHFT   &none     &kp LALT    &kp LGUI    &none       &none            &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT   &none       &kp MINUS
+          &kp LCTRL   &kp LPAR  &kp RPAR    &none       &none       &none            &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &kp GRAVE   &kp PLUS
+                                               &kp ESC   &kp ENTER     &kp LGUI            &kp SPACE    &none     &kp DEL
                         >;
                 };
 
-                raise_layer {
+                my_layer_2 {
                         bindings = <
           &mt LGUI KP_NUM   &kp KP_SLASH      &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS   &kp C_VOL_UP   &kp HOME   &kp PSCRN   &kp PG_UP   &kp SLCK          &kp CLCK   
           &mt LCTRL EQUAL   &kp KP_MULTIPLY   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS    &kp C_MUTE     &kp LEFT   &kp UP      &kp RIGHT   &kp INS           &mt RCTRL  K_APP
           &kp LALT          &kp KP_N0         &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_DOT     &kp C_VOL_DN   &kp END    &kp DOWN    &kp PG_DN   &kp PAUSE_BREAK   &kp RALT
-                                                          &trans      &trans      &lt ADJ RET    &lt ADJ ESC    &trans     &trans
+                                                          &trans      &trans      &lt LA3 RET    &lt LA3 ESC    &trans     &trans
                         >;
                 };
-                adjust_layer {
+                my_layer_3 {
                         bindings = <
-        &kp Q    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-                        &none   &none   &none         &none   &none   &none
+        &none    &none   &none   &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE             &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                                &none   &none   &none   &none   &none   &none
+                                   &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_4 {
                         bindings = <
-        &kp W    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &kp W    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_5 {
                         bindings = <
-        &kp E    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &kp E    &none   &none   &none   &none   &none                &kp KP_N4   &kp KP_N2   &kp KP_N8   &kp KP_N6   &none       &none
+        &none    &none   &none   &none   &none   &none                &none       &none       &none       &none       &none       &none
+        &none    &none   &none   &none   &none   &none                &none       &none       &none       &none       &none       &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_6 {
                         bindings = <
-        &kp R    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &kp R    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_7 {
                         bindings = <
-        &kp T    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &kp T    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_8 {
                         bindings = <
-        &kp A    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &kp A    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
