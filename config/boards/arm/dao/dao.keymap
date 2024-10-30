@@ -2,7 +2,7 @@
  * Copyright (c) 2021 Rafael Yumagulov
  *
  * SPDX-License-Identifier: MIT
- * TODO: Клики мыши не сработали почему то - &mkp LCLK   &mkp RCLK
+ * TODO: Клики мыши не сработали почему то - &mkp LCLK   &mkp RCLK  . Похоже просто надо include нужный добавить
  */
 
 #include <behaviors.dtsi>
@@ -52,10 +52,10 @@
 
                 my_layer_2 {
                         bindings = <
-          &none   &none      &none      &none   &kp DLLR    &kp PRCNT           &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp SLCK          &kp CLCK
-          &none   &none      &none      &none   &none       &none               &kp N0      &kp N4   &kp N5   &kp N6   &kp INS           &mt RCTRL  K_APP
-          &none   &kp LPAR   &kp RPAR   &none   &none       &none               &none       &kp N1   &kp N2   &kp N3   &kp PAUSE_BREAK   &kp RALT
-                                                          &trans      &trans      &lt LA3 RET          &lt LA3 ESC    &trans     &trans
+          &none       &none      &none      &none   &kp DLLR    &kp PRCNT           &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
+          &kp LSHFT   &kp LCTRL  &kp LALT   &none   &none       &none               &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS     &kp MINUS
+          &none       &kp LPAR   &kp RPAR   &none   &none       &none               &none       &kp N1   &kp N2   &kp N3   &kp DOT      &none
+                                               &trans      &trans    &lt LA3 RET          &lt LA3 ESC    &trans     &trans
                         >;
                 };
                 my_layer_3 {
@@ -68,9 +68,9 @@
                 };
                 my_layer_4 {
                         bindings = <
-        &none    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &none   &none   &none   &none   &none   &none
-        &none    &none      &kp LEFT   &kp DOW    &kp UP     &kp RIGHT            &none   &none   &none   &none   &none   &none
-        &none    &none      &none      &kp SPACE  &kp DEL    &kp BSPC             &none   &none   &none   &none   &none   &none
+        &none    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
+        &none    &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT            &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS     &kp MINUS
+        &none    &none      &kp DEL    &none      &kp SPACE  &kp BSPC             &none       &kp N1   &kp N2   &kp N3   &kp DOT      &none
                                        &kp ESC   &kp ENTER     &kp LGUI         &none   &none   &none
                         >;
                 };
@@ -79,31 +79,32 @@
         &none       &none   &none   &none   &none   &none                &kp KP_N4   &kp KP_N2   &kp KP_N8   &kp KP_N6   &none       &none
         &kp GRAVE   &none   &none   &none   &none   &none                &none       &none       &none       &none       &none       &none
         &kp LGUI    &none   &none   &none   &none   &none                &none       &none       &none       &none       &none       &none
-                        &none   &none   &none         &none   &none   &none
+                                    &none   &none   &mo LA8         &none   &none   &none
                         >;
                 };
                 my_layer_6 {
                         bindings = <
-        &kp R    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
+        &kp R    &none   &none   &none   &none   &none                &kp CARET     &kp AMPS     &kp LBRC    &kp RBRC    &kp ASTRK   &none
+        &none    &none   &none   &none   &none   &none                &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT   &none       &none
+        &none    &none   &none   &none   &none   &none                &none         &none        &none       &none       &none       &none
                         &none   &none   &none         &none   &none   &none
                         >;
                 };
                 my_layer_7 {
+                        /** Тут нужен шифт. Например на нажатие Shift + F6 */
                         bindings = <
-        &kp T    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-                        &none   &none   &none         &none   &none   &none
+        &none       &kp F1  &kp F2   &kp F3    &kp F4  &kp F5               &none   &none   &none   &none   &none   &none
+        &kp LSHFT   &kp F6  &kp F7   &kp F8    &kp F9  &kp F10              &none   &none   &none   &none   &none   &none
+        &none       &kp F10 &kp F11  &kp F12   &none   &none                &none   &none   &none   &none   &none   &none
+                                     &none   &none   &mo LA8         &none   &none   &none
                         >;
                 };
                 my_layer_8 {
                         bindings = <
-        &kp A    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                &none   &none   &none   &none   &none   &none
-                        &none   &none   &none         &none   &none   &none
+        &kp A    &none   &none      &none      &none       &none              &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
+        &none    &none   &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT          &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS     &kp MINUS
+        &none    &none   &kp DEL    &none      &kp SPACE   &kp BSPC           &none       &kp N1   &kp N2   &kp N3   &kp DOT      &none
+                                           &none   &none   &none         &none   &none   &none
                         >;
                 };
         };
