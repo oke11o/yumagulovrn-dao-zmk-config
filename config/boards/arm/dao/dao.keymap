@@ -37,7 +37,7 @@
                         /** Добавил CTRL, SHFT, ALT на правую сторону.  */
                         /** Эксперимент с &mt LALT TAB.  */
                         bindings = <
-          &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y   &kp U    &kp I        &kp O        &kp P           &mt RALT LBKT
+          &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
           &kp LSHFT          &lt LA4 A    &lt LA3 S    &lt LA2 D    &lt LA1 F    &kp G         &kp H   &kp J    &kp K        &lt LA7 L    &lt LA6 SEMI    &mt RSHFT SQT
           &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B         &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
                                                    &kp ESC   &lt LA5 ENTER   &kp LGUI               &kp SPACE   &kp RIGHT_BRACKET    &kp BSPC
@@ -45,10 +45,11 @@
                 };
                 my_layer_1 {
                         /** Чтобы LSHFT и LALT были рядом. Часто надо прыгать по словам (это ALT) и выделять слова (это SHTF+ALT) */
+                        /** kp LS(SEMI)   &kp LS(SQT) - и ниже - чтобы было так же как на default слое с Shift. То есть, не важно, зажата ли А или Shift */
                         bindings = <
-          &trans      &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LBRC    &kp RBRC    &kp ASTRK   &none
-          &kp LSHFT   &kp LALT  &none       &none       &none       &none            &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT   &none       &kp MINUS
-          &kp LCTRL   &kp LPAR  &kp RPAR    &none       &none       &none            &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &kp GRAVE   &kp PLUS
+          &trans      &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LBRC    &kp RBRC    &kp ASTRK      &kp GRAVE
+          &kp LSHFT   &kp LALT  &none       &none       &none       &none            &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT   &kp LS(SEMI)   &kp LS(SQT)
+          &kp LCTRL   &kp LPAR  &kp RPAR    &none       &none       &none            &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &kp LS(FSLH)   &kp LS(BSLH)
                                                &kp ESC   &kp ENTER     &kp LGUI            &kp SPACE    &kp RIGHT_BRACKET     &kp BSPC
                         >;
                 };
