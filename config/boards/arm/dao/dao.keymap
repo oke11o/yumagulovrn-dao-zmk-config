@@ -67,11 +67,11 @@
                         >;
                 };
                 my_layer_3 {
-                        /** TODO: Сюда еще надо яркость вынести.  */
+                        /** Слой только для громкости и яркости  */
                         bindings = <
         &none    &none   &none   &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE             &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                                &none   &none   &none   &none   &none   &none
-        &none    &none   &none   &none   &none   &none                                &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &kp C_BRI_UP   &kp C_BRI_DN   &none                  &none   &none   &none   &none   &none   &none
+        &none    &none   &none   &none          &none          &none                  &none   &none   &none   &none   &none   &none
                                    &none   &none   &none         &none   &none   &none
                         >;
                 };
