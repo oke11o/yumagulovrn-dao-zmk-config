@@ -37,9 +37,9 @@
                         /**  */
                         bindings = <
           &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
-          &kp LSHFT          &lt LA4 A    &lt LA3 S    &lt LA2 D    &lt LA1 F    &kp G         &kp H   &kp J    &kp K        &lt LA7 L    &lt LA6 SEMI    &mt RSHFT SQT
+          &kp LSHFT          &kp A        &kp S        &kp D        &kp F        &kp G         &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
           &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B         &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
-                                                   &lt LA2 ESC   &lt LA1 ENTER   &kp LGUI               &kp SPACE   &lt LA3 ENTER    &lt LA4 ESC
+                                                   &lt LA2 ESC   &lt LA1 ENTER   &kp LGUI               &kp SPACE   &lt LA3 ENTER    &lt LA4 BSPC
                         >;
                 };
                 my_layer_1 {
@@ -48,17 +48,17 @@
           &kp LALT      &none     &none       &none       &none       &kp DEL          &none         &none          &kp LBRC    &kp RBRC    &none          &none
           &kp LSHFT     &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LPAR    &kp RPAR    &kp ASTRK      &kp GRAVE
           &kp LCTRL     &kp LGUI  &none       &none       &kp SPACE   &kp BSPC         &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &none          &kp LGUI
-                                               &kp ESC   &kp ENTER     &mo LA5            &mo LA7    &kp ENTER     &kp ESC
+                                               &kp ESC   &kp ENTER     &mo LA5            &mo LA7    &kp ENTER     &kp BSPC
                         >;
                 };
 
                 my_layer_2 {
-                        /**  */
+                        /** TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы  */
                         bindings = <
-          &trans      &kp EXCL   &kp AT     &kp HASH  &kp DLLR    &kp PRCNT           &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
+          &trans      &kp EXCL   &kp AT     &kp HASH  &kp DLLR    &kp PRCNT           &kp EQUAL     &kp N7         &kp N8      &kp N9      &kp STAR     &kp SLASH
           &trans      &kp LALT   &none      &none     &none       &kp COLON           &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT   &kp PLUS     &kp MINUS
-          &kp LCTRL   &kp LPAR   &kp RPAR   &none     &none       &none               &none       &kp N1   &kp N2   &kp N3   &kp DOT      &kp KP_DOT
-                                               &kp ESC   &kp ENTER     &mo LA6            &mo LA8    &kp ENTER     &kp ESC
+          &trans      &kp LPAR   &kp RPAR   &none     &none       &none               &none         &kp N1         &kp N2      &kp N3      &kp DOT      &kp KP_DOT
+                                               &kp ESC   &kp ENTER     &mo LA6            &mo LA8    &kp ENTER     &kp BSPC
                         >;
                 };
                 my_layer_3 {
@@ -67,7 +67,7 @@
         &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &none       &none        &none      &none       &none      &none
         &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &kp LGUI
         &trans       &kp F11    &kp F12   &none    &none    &none                        &none       &none        &none      &none       &none      &none
-                                               &kp ESC   &kp ENTER     &mo LA5            &mo LA7    &kp ENTER     &kp ESC
+                                       &kp ESC   &kp ENTER     &mo LA5            &mo LA7    &kp ENTER     &kp BSPC
                         >;
                 };
                 my_layer_4 {
@@ -75,23 +75,23 @@
                         bindings = <
         &trans    &none     &none       &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR       &kp SLASH
         &trans    &none     &kp KP_N4   &kp KP_N2      &kp KP_N8      &kp KP_N6             &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
-        &trans    &none     &none       &kp C_BRI_UP   &kp C_BRI_DN   &none                 &none       &kp N1   &kp N2   &kp N3   &kp KP_COMMA   &none
-                                               &kp ESC   &kp ENTER     &mo LA6            &mo LA8    &kp ENTER     &kp ESC
+        &trans    &none     &none       &kp C_BRI_DN   &kp C_BRI_UP   &none                 &none       &kp N1   &kp N2   &kp N3   &kp COMMA      &kp DOT
+                                               &kp ESC   &kp ENTER     &mo LA6            &mo LA8    &kp ENTER     &kp BSPC
                         >;
                 };
                 my_layer_5 {
-                        /** TODO */
+                        /**  */
                         bindings = <
-        &none       &none   &kp N7   &kp N8   &kp N9   &none                &kp KP_N4   &kp KP_N2   &kp KP_N8   &kp KP_N6   &none       &none
-        &kp GRAVE   &kp N0  &kp N4   &kp N5   &kp N6   &none                &none       &none       &none       &none       &none       &none
-        &kp LGUI    &none   &kp N1   &kp N2   &kp N3   &kp BSPC             &none       &none       &none       &none       &none       &none
-                                    &none   &none   &mo LA8         &none   &none   &none
+        &trans     &none    &kp N7   &kp N8   &kp N9   &none                &none       &none       &none       &none       &none       &none
+        &trans     &kp N0   &kp N4   &kp N5   &kp N6   &none                &none       &none       &none       &none       &none       &none
+        &trans     &none    &kp N1   &kp N2   &kp N3   &kp BSPC             &none       &none       &none       &none       &none       &none
+                                    &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
                         >;
                 };
                 my_layer_6 {
                         /** TODO */
                         bindings = <
-        &kp R    &none   &none   &none   &none   &none                &kp CARET     &kp AMPS     &kp LBRC    &kp RBRC    &kp ASTRK   &none
+        &none    &none   &none   &none   &none   &none                &kp CARET     &kp AMPS     &kp LBRC    &kp RBRC    &kp ASTRK   &none
         &none    &none   &none   &none   &none   &none                &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT   &none       &none
         &none    &none   &none   &none   &none   &none                &none         &none        &none       &none       &none       &none
                         &none   &none   &none         &none   &none   &none
@@ -111,7 +111,7 @@
                         bindings = <
         &kp A    &none   &none      &none      &none       &none              &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
         &none    &none   &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT          &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS     &kp MINUS
-        &none    &none   &kp DEL    &none      &kp SPACE   &kp BSPC           &none       &kp N1   &kp N2   &kp N3   &kp DOT      &none
+        &none    &none   &kp DEL    &none      &kp SPACE   &kp BSPC           &none       &kp N1   &kp N2   &kp N3   &kp COMMA    &kp DOT
                                            &none   &none   &none         &none   &none   &none
                         >;
                 };
