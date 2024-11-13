@@ -34,12 +34,13 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        /**  */
+                        /** Добавил CTRL, SHFT, ALT на правую сторону - активно пользуюсь RSHFT  */
+                        /** Эксперимент с &mt LALT TAB - пока очень нравится  */
                         bindings = <
-          &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T         &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
-          &kp LSHFT          &kp A        &kp S        &kp D        &kp F        &kp G         &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
-          &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B         &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
-                                                   &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI               &kp SPACE   &lt RT3 ENTER    &lt RT4 BSPC
+          &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
+          &kp LSHFT          &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
+          &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
+                                                        &lt LT2 ESC   &mo LT1   &kp LGUI           &kp SPACE   &lt RT3 ENTER    &lt RT4 BSPC
                         >;
                 };
                 left_thumb_layer_1 {
@@ -47,7 +48,7 @@
                         bindings = <
           &kp LALT      &none     &none       &none       &none       &kp DEL          &none         &none          &kp LBRC    &kp RBRC    &none          &none
           &kp LSHFT     &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LPAR    &kp RPAR    &kp ASTRK      &kp GRAVE
-          &kp LCTRL     &kp LGUI  &none       &none       &kp SPACE   &kp BSPC         &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &none          &kp LGUI
+          &kp LCTRL     &kp LGUI  &none       &kp ENTER   &kp SPACE   &kp BSPC         &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &none          &kp LGUI
                                                &kp ESC   &kp ENTER     &mo LT5            &mo RT7    &kp ENTER     &kp BSPC
                         >;
                 };
@@ -56,34 +57,38 @@
                         /** Для слоев LT2, RT4, RT8 - правая рука одинаковая  */
                         /** TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы  */
                         /** TODO: Так же на правую руку можно продублировать цифры, чтобы не использовать корявку  */
+                        /** Имеет полный дубликат на left_thumb_layer_6 */
                         bindings = <
           &trans      &none      &none       &none        &none       &kp PRCNT           &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp STAR     &kp SLASH
           &trans      &kp LALT   &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT           &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS     &kp MINUS
-          &trans      &kp LGUI   &none       &none        &none       &none               &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
-                                               &kp ESC   &kp ENTER     &mo LT2            &mo RT8    &kp ENTER     &kp BSPC
+          &trans      &kp LGUI   &none       &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
+                                               &kp ESC   &kp ENTER     &mo LT6            &mo RT8    &kp ENTER     &kp BSPC
                         >;
                 };
                 right_thumb_layer_3 {
-                        /**  */
+                        /** Имеет полный дубликат на right_thumb_layer_7 */
+                        /** Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, кроме Cmd */
+                        /** Так же на правой руке тут еще дофига места. А это типа в среднем доступе layout. Можно сюда управление мышью вынести. */
                         bindings = <
-        &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &none       &none        &none      &none       &none      &none
+        &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &kp KP_N4   &kp KP_N2    &kp KP_N8  &kp KP_N6   &none      &none
         &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &none
         &trans       &kp F11    &kp F12   &none    &none    &none                        &none       &none        &none      &none       &kp LGUI   &none
                                        &kp ESC   &kp ENTER     &mo LT5            &mo RT7    &kp ENTER     &kp BSPC
                         >;
                 };
                 right_thumb_layer_4 {
-                        /**  */
-                        /** Для слоев LT2, RT4, RT8 - правая рука одинаковая  */
+                        /** Имеет полный дубликат на right_thumb_layer_8 */
+                        /** Управляющие кнопки и движение мышью */
+                        /** Сюда можно вынести Ctrl, Alt, Shift, Cmd. Сдвинув Bright правее */
                         bindings = <
         &trans    &none     &none       &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR       &kp SLASH
-        &trans    &none     &kp KP_N4   &kp KP_N2      &kp KP_N8      &kp KP_N6             &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
-        &trans    &none     &none       &kp C_BRI_DN   &kp C_BRI_UP   &none                 &kp COLON   &kp N1   &kp N2   &kp N3   &kp COMMA      &kp DOT
+        &trans    &none     &none       &none          &none          &none                 &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
+        &trans    &none     &none       &none          &kp C_BRI_DN   &kp C_BRI_UP          &kp COLON   &kp N1   &kp N2   &kp N3   &kp COMMA      &kp DOT
                                                &kp ESC   &kp ENTER     &mo LT6            &mo RT8    &kp ENTER     &kp BSPC
                         >;
                 };
                 left_thumb_layer_5 {
-                        /**  */
+                        /** По факту единственный, который не копия своих неудобных пальцев */
                         bindings = <
         &trans     &none       &kp N1   &kp N2   &kp N3   &kp PRCNT            &none       &none       &none       &none       &none       &none
         &trans     &none       &kp N4   &kp N5   &kp N6   &kp N0               &none       &none       &none       &none       &none       &none
@@ -92,30 +97,30 @@
                         >;
                 };
                 left_thumb_layer_6 {
-                        /** Просто только стрелки на левой руке */
+                        /** Копия left_thumb_layer_2 */
                         bindings = <
-        &none    &none      &none      &none       &none      &none                &none         &none        &none       &none       &none       &none
-        &none    &kp LALT   &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT            &none         &none        &none       &none       &none       &none
-        &none    &kp LGUI   &none      &none       &none      &none                &none         &none        &none       &none       &none       &none
-                                    &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
+          &trans      &none      &none       &none        &none       &kp PRCNT           &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp STAR     &kp SLASH
+          &trans      &kp LALT   &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT           &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS     &kp MINUS
+          &trans      &kp LGUI   &none       &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
+                                                      &trans   &trans   &kp LGUI        &kp SPACE   &trans   &trans
                         >;
                 };
                 right_thumb_layer_7 {
-                        /** TODO */
+                        /** Копия right_thumb_layer_3 */
                         bindings = <
-        &none       &kp F1  &kp F2   &kp F3    &kp F4  &kp F5               &none   &none   &none   &none   &none   &none
-        &kp LSHFT   &kp F6  &kp F7   &kp F8    &kp F9  &kp F10              &none   &none   &none   &none   &none   &none
-        &none       &kp F10 &kp F11  &kp F12   &none   &none                &none   &none   &none   &none   &none   &none
-                                    &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
+        &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &kp KP_N4   &kp KP_N2    &kp KP_N8  &kp KP_N6   &none      &none
+        &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &none
+        &trans       &kp F11    &kp F12   &none    &none    &none                        &none       &none        &none      &none       &kp LGUI   &none
+                                                      &trans   &trans   &kp LGUI        &kp SPACE   &trans   &trans
                         >;
                 };
                 right_thumb_layer_8 {
-                        /**  */
-                        /** Для слоев LT2, RT4, RT8 - правая рука одинаковая  */
+                        /** Копия right_thumb_layer_4 */
+                        /** Но непонятно, зачем дублировать управляющие Volume, Bright. Но другого не придумал. Пусть пока так пока не знаю, какие еще нужны */
                         bindings = <
-        &none    &none   &none      &none      &none       &kp PRCNT          &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR     &kp SLASH
-        &none    &none   &none      &none      &none       &none              &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS     &kp MINUS
-        &none    &none   &none      &none      &kp SPACE   &kp BSPC           &kp COLON   &kp N1   &kp N2   &kp N3   &kp COMMA    &kp DOT
+        &trans    &none     &none       &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR       &kp SLASH
+        &trans    &none     &none       &none          &none          &none                 &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
+        &trans    &none     &none       &none          &kp C_BRI_DN   &kp C_BRI_UP          &kp COLON   &kp N1   &kp N2   &kp N3   &kp COMMA      &kp DOT
                                     &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
                         >;
                 };
