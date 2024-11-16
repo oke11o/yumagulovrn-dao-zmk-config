@@ -38,13 +38,16 @@
                         /** Эксперимент с &mt LALT TAB - пока очень нравится  */
                         /** TODO: попробовать все таки вернуть &lt LT1 ENTER но установить меньше задержку. 
                                 Да и в целом надо попробовать меньше задержку установить для многих клавиш. Все таки использвать клавишу F было прям удобно 
+                            UPD: отказаался от &lt RT3 ENTER - так как на правом thumb появилось много функциональности и начал путаться. 
+                                 Поэтому сейчас вообще координально убрал &lt RT3 ENTER заменив на -> &mo RT3. Ну и вернул &mo LT1 -> &lt LT1 ENTER
+                                 Вообще подумал, что можно базовые стрелки вынести на слой, который буду нажимать левым мизинцем. Там есть Shift. Поэтому можно либо A, либо Ctrl
 
                         */
                         bindings = <
           &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
           &kp LSHFT          &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
           &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
-                                                        &lt LT2 ESC   &mo LT1   &kp LGUI           &kp SPACE   &lt RT3 ENTER    &lt RT4 BSPC
+                                                        &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &kp SPACE   &mo RT3   &lt RT4 BSPC
                         >;
                 };
                 left_thumb_layer_1 {
@@ -52,6 +55,7 @@
                                 Прикол, что все таки вернулся к цифрам на left_thumb_layer_1. 
                                 Но верхний ряд у меня был занят только &kp DEL &kp LBRC &kp RBRC
                                 Но &kp LBRC &kp RBRC можно использовать &kp LBKT&kp RBKT с SHFT, а &kp DEL унес на нижний ряд
+                        UPD: Чет пока ряд с &kp N1 не заходит
                          */
                         bindings = <
           &kp LALT      &kp N1    &kp N2      &kp N3      &kp N4      &kp N5           &kp N6        &kp N7         &kp N8      &kp N9      &kp N0         &none
@@ -62,10 +66,12 @@
                 };
 
                 left_thumb_layer_2 {
-                        /** Для слоев LT2, RT4, RT8 - правая рука одинаковая  */
-                        /** TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы  */
-                        /** TODO: Так же на правую руку можно продублировать цифры, чтобы не использовать корявку  */
-                        /** Имеет полный дубликат на left_thumb_layer_6 */
+                        /**
+                                Для слоев LT2, RT4, RT8 - правая рука одинаковая. Да и с LT2, RT4 как раз переход на RT8
+                                TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы  */
+                                TODO: Так же на правую руку можно продублировать цифры, чтобы не использовать корявку  */
+                                Имеет полный дубликат на left_thumb_layer_6 
+                        */
                         bindings = <
           &trans      &none      &none       &none        &none       &kp PRCNT           &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp STAR     &kp SLASH
           &trans      &kp LALT   &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT           &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS     &kp MINUS
