@@ -41,15 +41,15 @@
                             UPD: отказаался от &lt RT3 ENTER - так как на правом thumb появилось много функциональности и начал путаться. 
                                  Поэтому сейчас вообще координально убрал &lt RT3 ENTER заменив на -> &mo RT3. Ну и вернул &mo LT1 -> &lt LT1 ENTER
                                  Вообще подумал, что можно базовые стрелки вынести на слой, который буду нажимать левым мизинцем. Там есть Shift. Поэтому можно либо A, либо Ctrl
-                        - &lt CARET LSHFT for , in Russian
-                        - &lt AMPS RT3 for . in Russion
-                        - experiment &lt { quick_tap_ms = <100>; } CARET LSHFT
+                        - &lt LSHFT CARET for , in Russian
+                        - &lt RT3 AMPS for . in Russion
+                        - experiment &lt { quick_tap_ms = <100>; } LSHFT CARET 
                         */
                         bindings = <
           &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
-          &lt CARET LSHFT    &kp A        &kp S        &kp D        &lt RT3 F    &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
+          &lt LSHFT CARET    &kp A        &kp S        &kp D        &lt RT3 F    &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
           &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
-                                                  &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &kp SPACE   &lt AMPS RT3   &lt RT4 BSPC
+                                                  &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &kp SPACE   &lt RT3 AMPS   &lt RT4 BSPC
                         >;
                 };
                 left_thumb_layer_1 {
