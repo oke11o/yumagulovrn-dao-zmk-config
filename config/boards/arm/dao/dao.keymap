@@ -86,12 +86,13 @@
                         Имеет полный дубликат на right_thumb_layer_7
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, кроме Cmd
                         Так же на правой руке тут еще дофига места. А это типа в среднем доступе layout. Можно сюда управление мышью вынести. 
-                        - Добавил &kp BSPC, &kp DEL для того, чтобы отказаться от LT1+H=rus(,) and LT2+J=rus(.)
+                        - Добавил &kp BSPC, чтобы можно было нажимать F+BSPC
+                        - Добавил сюда &kp LBRC, &kp RBRC, &kp LBKT, &kp RBKT, &kp LPAR, &kp RPAR. Так же их будет удобно нажимать вместо с LGUI
                         */
                         bindings = <
         &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &kp KP_N4   &kp KP_N2    &kp KP_N8  &kp KP_N6   &none      &none
-        &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &none
-        &trans       &kp F11    &kp F12   &none    &none    &none                        &kp BSPC    &none        &none      &none       &kp LGUI   &kp DEL
+        &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &kp LPAR
+        &trans       &kp F11    &kp F12   &kp BSPC &none    &none                        &kp LBRC    &kp RBRC     &kp LBKT   &kp RBKT    &kp LGUI   &kp RPAR
                                        &kp ESC   &kp ENTER     &mo LT5            &mo RT7    &kp ENTER     &kp BSPC
                         >;
                 };
