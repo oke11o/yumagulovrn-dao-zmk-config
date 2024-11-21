@@ -72,12 +72,13 @@
                                 Для слоев LT2, RT2, RT4 - правая рука одинаковая. Да и с LT2, RT2 как раз переход на RT4
                                 TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы
                                 TODO: Так же на правую руку можно продублировать цифры, чтобы не использовать корявку 
+                                - &kp LGUI   &kp GRAVE - для переключения между окнами одной рукой. Сейчас приходится двумя руками - LT1+LGUI+GRAVE
                                 Имеет полный дубликат на left_thumb_layer_4 
                         */
                         bindings = <
           &trans      &none      &none       &none        &none       &kp PRCNT           &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp STAR     &kp SLASH
           &trans      &kp LALT   &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT           &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS     &kp MINUS
-          &trans      &kp LGUI   &none       &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
+          &trans      &kp LGUI   &kp GRAVE   &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
                                                &kp ESC   &kp ENTER     &mo LT4            &mo RT4    &kp ENTER     &kp BSPC
                         >;
                 };
@@ -121,7 +122,7 @@
                         bindings = <
           &trans      &none      &none       &none        &none       &kp PRCNT           &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp STAR     &kp SLASH
           &trans      &kp LALT   &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT           &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS     &kp MINUS
-          &trans      &kp LGUI   &none       &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
+          &trans      &kp LGUI   &kp GRAVE   &none        &kp SPACE   &kp BSPC            &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA      &kp DOT
                                                       &trans   &trans   &kp LGUI        &kp SPACE   &trans   &trans
                         >;
                 };
