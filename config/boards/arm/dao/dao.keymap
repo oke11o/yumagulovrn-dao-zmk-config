@@ -89,12 +89,13 @@
                         Так же на правой руке тут еще дофига места. А это типа в среднем доступе layout. Можно сюда управление мышью вынести. 
                         - Добавил &kp BSPC, чтобы можно было нажимать F+BSPC
                         - Добавил сюда &kp LBRC, &kp RBRC, &kp LBKT, &kp RBKT, &kp LPAR, &kp RPAR. Так же их будет удобно нажимать вместо с LGUI
+                        - И тут продолжение верхнего - добавил LGUI на 4 ряд. Все таки это удобнее для CMD+[, CMD+{
                         */
                         bindings = <
         &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &kp KP_N4   &kp KP_N2    &kp KP_N8  &kp KP_N6   &none      &none
         &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &kp LPAR
         &trans       &kp DEL    &kp BSPC  &kp SPC  &kp F11  &kp F12                      &kp LBRC    &kp RBRC     &kp LBKT   &kp RBKT    &kp LGUI   &kp RPAR
-                                       &kp ESC   &kp ENTER     &mo LT3            &mo RT3    &kp ENTER     &kp BSPC
+                                       &kp ESC   &kp ENTER     &kp LGUI            &mo RT3    &kp ENTER     &kp BSPC
                         >;
                 };
                 right_thumb_layer_2 {
