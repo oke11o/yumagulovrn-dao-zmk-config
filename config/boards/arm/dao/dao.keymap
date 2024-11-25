@@ -18,6 +18,7 @@
 #define LT4 6
 #define RT3 7
 #define RT4 8
+#define RFE 9
 
 &lt { quick_tap_ms = <100>; };
 &mt { quick_tap_ms = <100>; };
@@ -46,7 +47,7 @@
                         - experiment &lt { quick_tap_ms = <100>; } LSHFT CARET 
                         */
                         bindings = <
-          &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
+          &mt LALT TAB       &kp Q        &kp W        &lt RFE E    &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
           &mt LSHFT CARET    &kp A        &kp S        &kp D        &lt RT1 F    &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt RSHFT SQT
           &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &mt RCTRL BSLH
                                                   &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &kp SPACE   &lt RT1 AMPS   &lt RT2 BSPC
@@ -57,12 +58,12 @@
                                 Прикол, что все таки вернулся к цифрам на left_thumb_layer_1. 
                                 Но верхний ряд у меня был занят только &kp DEL &kp LBRC &kp RBRC
                                 Но &kp LBRC &kp RBRC можно использовать &kp LBKT&kp RBKT с SHFT, а &kp DEL унес на нижний ряд
-                        UPD: Чет пока ряд с &kp N1 не заходит
+                        UPD: Чет пока ряд с &kp N1 не заходит - вообще заходит. Но надо поработать над другим положением цифр
                          */
                         bindings = <
           &kp LALT      &kp N1    &kp N2      &kp N3      &kp N4      &kp N5           &kp N6        &kp N7         &kp N8      &kp N9      &kp N0         &none
-          &kp LSHFT     &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LPAR    &kp RPAR    &kp ASTRK      &kp GRAVE
-          &kp LCTRL     &kp LGUI  &kp DEL     &kp ENTER   &kp SPACE   &kp BSPC         &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &none          &kp LGUI
+          &kp LSHFT     &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET     &kp AMPS       &kp LPAR    &kp RPAR    &kp ASTRK      &none
+          &kp LCTRL     &kp LGUI  &kp DEL     &kp ENTER   &kp SPACE   &kp BSPC         &kp COLON     &kp KP_EQUAL   &kp LBKT    &kp RBKT    &kp GRAVE      &kp LGUI
                                                &kp ESC   &kp ENTER     &mo LT3            &mo RT3    &kp ENTER     &kp BSPC
                         >;
                 };
@@ -143,6 +144,22 @@
         &trans    &none     &none       &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR       &kp SLASH
         &trans    &none     &none       &none          &none          &none                 &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
         &trans    &none     &none       &none          &kp C_BRI_DN   &kp C_BRI_UP          &kp COLON   &kp N1   &kp N2   &kp N3   &kp COMMA      &kp DOT
+                                    &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
+                        >;
+                };
+                right_finger_e {
+                        /**
+                        Попадаю сюда при зажатии E. Почему E? Чтобы было движение средним пальцем. Иначе путаюсь, что указтельный не двигается или средний? 
+                        Ну и чтобы ввобще больше сюда ничего на левую руку не добавлять. Особенно Shift. Кроме LGUI
+                        [] - оставил на клавише F
+                        !_{}__
+                        ^&()*+
+                        :=<>`_
+                        */
+                        bindings = <
+        &trans    &none     &none       &none          &none          &none            &kp EXCL      &none          &kp LBRC        &kp RBRC     &none          &none
+        &trans    &none     &none       &none          &none          &none            &kp CARET     &kp AMPS       &kp LPAR        &kp RPAR     &kp ASTRK      &kp PLUS
+        &trans    &none     &none       &none          &none          &none            &kp COLON     &kp KP_EQUAL   &kp LS(COMMA)   &kp LS(DOT)  &kp GRAVE      &none
                                     &trans   &trans   &kp LGUI               &kp SPACE   &trans   &trans
                         >;
                 };
