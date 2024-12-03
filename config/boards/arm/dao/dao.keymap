@@ -15,8 +15,10 @@
 #define RT1 3
 #define RT2 4
 #define RFF 5
-#define RFE 6
-#define RFS 7
+#define RFFT 6
+#define RFE 7
+#define RFET 8
+#define RFS 9
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -53,6 +55,7 @@
                 };
                 left_thumb_layer_1 {
                         /** 
+                        1 LT1
                                 Прикол, что все таки вернулся к цифрам на left_thumb_layer_1. 
                                 Но верхний ряд у меня был занят только &kp DEL &kp LBRC &kp RBRC
                                 Но &kp LBRC &kp RBRC можно использовать &kp LBKT&kp RBKT с SHFT, а &kp DEL унес на нижний ряд
@@ -68,6 +71,7 @@
 
                 left_thumb_layer_2 {
                         /**
+                        2 LT2
                                 Для слоев LT2, RT2, RT4 - правая рука одинаковая. Да и с LT2, RT2 как раз переход на RT4
                                 TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны, чтобы
                                 TODO: Так же на правую руку можно продублировать цифры, чтобы не использовать корявку 
@@ -83,6 +87,7 @@
                 };
                 right_thumb_layer_1 {
                         /** 
+                        3 RT1
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, кроме Cmd
                         Так же на правой руке тут еще дофига места. А это типа в среднем доступе layout. Можно сюда управление мышью вынести. 
                         - Добавил &kp BSPC, чтобы можно было нажимать F+BSPC
@@ -97,8 +102,11 @@
                         >;
                 };
                 right_thumb_layer_2 {
-                        /** Управляющие кнопки и движение мышью */
-                        /** Сюда можно вынести Ctrl, Alt, Shift, Cmd. Сдвинув Bright правее */
+                        /** 
+                        4 RT2
+                        Управляющие кнопки и движение мышью 
+                        Сюда можно вынести Ctrl, Alt, Shift, Cmd. Сдвинув Bright правее 
+                        */
                         bindings = <
         &trans    &none     &none       &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE            &kp EQUAL   &kp N7   &kp N8   &kp N9   &kp STAR       &kp SLASH
         &trans    &none     &none       &none          &none          &none                 &kp N0      &kp N4   &kp N5   &kp N6   &kp PLUS       &kp MINUS
@@ -108,6 +116,7 @@
                 };
                 right_finger_f {
                         /**
+                        5 RFF
                         Попадаю сюда при зажатии F.
                         Получается довольно много сюда вынес. На остальные 3 пальца. И SPACE, BSPC, и символы !@#$%. Еще и DEL.
                         А на правой руке вроде привычно уже. Особенно скобки {}()[]. Ну и эти символы тоже зачет - :=^&*+`
@@ -120,11 +129,25 @@
         &kp DEL   &kp EXCL  &kp AT     &kp HASH  &none     &none            &none        &none       &kp LBRC    &kp RBRC    &none        &none
         &trans    &kp BSPC  &none      &kp SPC   &none     &none            &kp CARET    &kp AMPS    &kp LPAR    &kp RPAR    &kp ASTRK    &kp PLUS
         &trans    &kp DLLR  &kp PRCNT  &none     &none     &none            &kp COLON    &kp EQUAL   &kp LBKT    &kp RBKT    &kp GRAVE    &none
-                                       &trans    &trans    &kp LGUI         &kp SPACE    &trans       &trans
+                                       &trans    &trans    &mo RFFT         &kp SPACE    &trans       &trans
+                        >;
+                };
+                right_finger_f_thumb_rfft {
+                        /**
+                        6 RFFT
+                        Попадаю сюда при зажатии F+Thumb
+                        Чисто цифры
+                        */
+                        bindings = <
+        &trans    &none    &kp N7    &kp N8    &kp N9    &none            &none    &none    &none    &none    &none    &none
+        &trans    &none    &kp N4    &kp N5    &kp N6    &kp N0           &none    &none    &none    &none    &none    &none
+        &trans    &none    &kp N1    &kp N2    &kp N3    &none            &none    &none    &none    &none    &none    &none
+                                    &trans   &trans   &trans           &trans   &trans   &trans
                         >;
                 };
                 right_finger_e {
                         /**
+                        7 RFE
                         Попадаю сюда при зажатии E. Почему E? Чтобы было движение средним пальцем. Иначе путаюсь, что указтельный не двигается или средний? 
                         Вынес сюда стрелки. Тут точно нужен SHIFT. Пока непонятно, что тут еще может понадобится
                         */
@@ -132,11 +155,25 @@
         &trans    &none     &none    &none    &none    &none            &kp KP_N4   &kp KP_N2    &kp KP_N8     &kp KP_N6     &none       &none
         &trans    &none     &none    &none    &none    &none            &kp LEFT    &kp DOWN     &kp UP        &kp RIGHT     &kp LALT    &none
         &trans    &none     &none    &none    &none    &none            &none       &none        &none         &none         &kp LGUI    &none
-                                     &trans   &trans   &kp LGUI         &kp SPACE   &trans       &trans
+                                     &trans   &trans   &mo RFET         &kp SPACE   &trans       &trans
+                        >;
+                };
+                right_finger_e_thumb_rfet {
+                        /**
+                        8 RFET
+                        Попадаю сюда при зажатии E+Thumb
+                        Чисто стрелки
+                        */
+                        bindings = <
+        &trans    &none    &none       &none       &none     &none            &none    &none    &none    &none    &none    &none
+        &trans    &none    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT        &none    &none    &none    &none    &none    &none
+        &trans    &none    &none       &none       &none     &none            &none    &none    &none    &none    &none    &none
+                                       &trans      &trans    &trans           &trans   &trans   &trans
                         >;
                 };
                 right_finger_s {
                         /**
+                        9 RFS
                         Чисто цифры
                         */
                         bindings = <
