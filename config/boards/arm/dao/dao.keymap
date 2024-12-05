@@ -137,11 +137,12 @@
                         6 RFFT
                         Попадаю сюда при зажатии F+Thumb
                         Чисто цифры
+                        &kp LGUI - нужно СMD+1 часто нажимать
                         */
                         bindings = <
         &trans    &none    &kp N7    &kp N8    &kp N9    &none            &none    &none    &none    &none    &none    &none
         &trans    &none    &kp N4    &kp N5    &kp N6    &kp N0           &none    &none    &none    &none    &none    &none
-        &trans    &none    &kp N1    &kp N2    &kp N3    &none            &none    &none    &none    &none    &none    &none
+        &trans    &kp LGUI &kp N1    &kp N2    &kp N3    &none            &none    &none    &none    &none    &none    &none
                                     &trans   &trans   &trans           &trans   &trans   &trans
                         >;
                 };
