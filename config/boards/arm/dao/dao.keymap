@@ -157,12 +157,11 @@
                 left_shift_layer {
                         /**
                         8 LSL
-                        Чисто цифры|"""||||||\\||'"
                         */
                         bindings = <
-        &kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR    &kp PRCNT           &none       &none        &kp LBRC   &kp RBRC    &none      &kp LS(GRAVE)
-        &none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR    &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT   &kp LS(SQT)
-        &trans      &none       &none      &none       &kp SPACE   &kp BSPC            &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &kp LGUI   &kp GRAVE
+        &kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR    &kp PRCNT           &none       &none        &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
+        &none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR    &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT            &kp LS(SQT)
+        &trans      &none       &none      &none       &kp SPACE   &kp BSPC            &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
                                        &kp DEL    &kp ENTER  &kp LGUI                &kp SPACE   &trans   &trans
                         >;
                 };
