@@ -1,3 +1,5 @@
+## v3.5 Shift to LT2
+
 ## v3.4 add layers left_thumb_thumb, right_thumb_thumb
 
 ## v3.3 Left / right arrows
