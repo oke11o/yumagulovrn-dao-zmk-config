@@ -70,7 +70,7 @@
                         */
                         bindings = <
           &trans      &none       &none        &none        &none       &none               &trans      &none      &none       &none       &none       &none
-          &trans      &none       &none        &none        &none       &none               &trans      &none      &none       &none       &none       &none
+          &trans      &none       &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &trans      &none      &none       &none       &none       &none
           &trans      &kp LGUI    &kp GRAVE    &none        &none       &none               &trans      &none      &none       &none       &none       &none
                                              &kp ESC      &kp ENTER   &kp LGUI            &kp SPC    &kp LSHFT   &kp BSPC
                         >;
@@ -79,12 +79,12 @@
                         /** 
                         3 RT1
                         Можно сюда управление мышью вынести. 
-                        Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, кроме Cmd
+                        Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, коме Cmd
                         */
                         bindings = <
-        &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &none    &none    &none    &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE
-        &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &none    &none    &none    &none          &kp C_BRI_DN   &kp C_BRI_UP
-        &trans       &kp DEL    &kp BSPC  &kp SPC  &kp F11  &kp F12                      &none    &none    &none    &none          &none          &none
+        &trans       &kp F1     &kp F2    &kp F3   &kp F4   &kp F5                       &none      &kp C_BRI_DN   &kp C_BRI_UP   &kp C_VOL_DN   &kp C_VOL_UP   &kp C_MUTE
+        &trans       &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT      &kp LALT       &none
+        &trans       &kp DEL    &kp BSPC  &kp SPC  &kp F11  &kp F12                      &kp ESC    &kp SPC        &kp ENTER      &none          &kp LGUI       &none
                                        &kp ESC   &kp ENTER     &kp LGUI            &kp SPACE    &kp LSHFT     &kp BSPC
                         >;
                 };
