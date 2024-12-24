@@ -1,3 +1,5 @@
+## v3.7 return &mt LSHFT SQT to base layer
+
 ## v3.6 LSHFT to RT2
 
 ## v3.5 Shift to LT2
