@@ -98,7 +98,7 @@
                         */
                         bindings = <
         &kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR    &kp PRCNT           &kp BSPC    &kp ENTER    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
-        &none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR    &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &kp LALT            &kp LS(SQT)
+        &none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR    &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
         &trans      &kp BSPC    &none      &none       &kp SPACE   &kp LS(SQT)         &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
                                            &kp DEL     &kp ENTER   &mo LTT             &mo RTT     &trans       &trans
                         >;
