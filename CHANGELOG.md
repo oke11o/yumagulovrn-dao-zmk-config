@@ -1,3 +1,5 @@
+## v4.2 revert LTL to LGUI
+
 ## v4.1 Fix switches to LTL
 
 ## v4.0 Shift to right hand
