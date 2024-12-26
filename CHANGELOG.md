@@ -1,3 +1,5 @@
+## v3.8 add to left_shift_layer &mt LALT LS(SEMI)
+
 ## v3.7 return &mt LSHFT SQT to base layer
 
 ## v3.6 LSHFT to RT2
