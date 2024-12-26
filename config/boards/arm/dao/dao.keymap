@@ -15,8 +15,7 @@
 #define LT1 3
 #define LT2 4
 #define RT1 5
-#define LST 6
-#define RTT 7
+#define RTT 6
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -48,7 +47,7 @@
         &mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
         &mo LSL            &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &mt LSHFT SQT
         &mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                                  &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &mt LSHFT SPC   &kp LSHFT   &lt RT1 BSPC
+                                                  &lt LT2 ESC   &lt LT1 ENTER   &mo LTL           &mt LSHFT SPC   &kp LSHFT   &lt RT1 BSPC
                         >;
                 };
                 left_thumb_layer {
@@ -58,10 +57,10 @@
                         Для чего? Это для нажатия CMD+key
                         */
                         bindings = <
-        &kp LG(TAB)       &kp LG(Q)   &kp LG(W)   &kp LG(E)   &kp LG(R)   &kp LG(T)          &kp LG(Y)   &kp LG(U)   &kp LG(I)       &kp LG(O)     &kp LG(P)      &kp LBKT
-        &kp LSHFT         &kp LG(A)   &kp LG(S)   &kp LG(D)   &kp LG(F)   &kp LG(G)          &kp LG(H)   &kp LG(J)   &kp LG(K)       &kp LG(L)     &kp LG(SEMI)   &kp SQT
-        &kp LCTRL         &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LG(B)          &kp LG(N)   &kp LG(M)   &kp LG(COMMA)   &kp LG(DOT)   &kp LG(FSLH)   &kp BSLH
-                                                  &kp DEL     &kp LG(ENTER)   &none          &mt LSHFT LG(SPC)      &trans      &kp BSPC
+        &kp LG(TAB)       &kp LG(Q)   &kp LG(W)   &kp LG(E)   &kp LG(R)   &kp LG(T)          &kp LG(Y)   &kp LG(U)   &kp LG(I)       &kp LG(O)     &kp LG(P)      &kp LG(LBKT)
+        &kp LSHFT         &kp LG(A)   &kp LG(S)   &kp LG(D)   &kp LG(F)   &kp LG(G)          &kp LG(H)   &kp LG(J)   &kp LG(K)       &kp LG(L)     &kp LG(SEMI)   &kp LG(SQT)
+        &kp LCTRL         &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LG(B)          &kp LG(N)   &kp LG(M)   &kp LG(COMMA)   &kp LG(DOT)   &kp LG(FSLH)   &kp LG(BSLH)
+                                            &kp LG(DEL)   &kp LG(ENTER)   &none          &mt LSHFT LG(SPC)      &none      &kp LG(BSPC)
                         >;
                 };
                 left_shift_layer {
@@ -74,7 +73,7 @@
         &kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp BSPC    &kp ENTER    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
         &none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
         &trans      &kp BSPC    &none      &none       &kp SPACE       &kp LS(SQT)         &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
-                                           &kp DEL     &kp LS(ENTER)   &mo LST             &mo RTT     &trans       &trans
+                                           &kp DEL     &kp LS(ENTER)   &kp LGUI             &mo RTT     &trans       &trans
                         >;
                 };
                 left_thumb_layer_1 {
@@ -117,22 +116,9 @@
                                        &kp ESC   &kp ENTER     &kp LGUI            &kp SPACE    &kp LSHFT     &kp BSPC
                         >;
                 };
-                left_shift_thumb_layer {
-                        /**
-                        6
-                        LST
-                        Для чего? Это для нажатия CMD+SHIFT+key
-                        */
-                        bindings = <
-        &kp LG(LS(TAB))   &kp LG(LS(Q))   &kp LG(LS(W))   &kp LG(LS(E))   &kp LG(LS(R))   &kp LG(LS(T))          &kp LG(LS(Y))   &kp LG(LS(U))   &kp LG(LS(I))       &kp LG(LS(O))     &kp LG(LS(P))      &kp LS(LBKT)
-        &kp LSHFT         &kp LG(LS(A))   &kp LG(LS(S))   &kp LG(LS(D))   &kp LG(LS(F))   &kp LG(LS(G))          &kp LG(LS(H))   &kp LG(LS(J))   &kp LG(LS(K))       &kp LG(LS(L))     &kp LG(LS(SEMI))   &kp LS(SQT)
-        &kp LCTRL         &kp LG(LS(Z))   &kp LG(LS(X))   &kp LG(LS(C))   &kp LG(LS(V))   &kp LG(LS(B))          &kp LG(LS(N))   &kp LG(LS(M))   &kp LG(LS(COMMA))   &kp LG(LS(DOT))   &kp LG(LS(FSLH))   &kp LS(BSLH)
-                                                                        &kp DEL     &kp ENTER   &kp LGUI          &mo RTT      &trans      &trans
-                        >;
-                };
                 right_thumb_thumb {
                         /**
-                        7
+                        6
                         RTT
                         */
                         bindings = <

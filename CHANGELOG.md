@@ -1,3 +1,5 @@
+## v4.1 Fix switches to LTL
+
 ## v4.0 Shift to right hand
 
 - left_shift_layer add LS(ENTER)
