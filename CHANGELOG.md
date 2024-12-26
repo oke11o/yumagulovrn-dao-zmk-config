@@ -1,3 +1,8 @@
+## v4.0 Shift to right hand
+
+- left_shift_layer add LS(ENTER)
+- CMD+SHIFT+key to left_shift_thumb_layer
+
 ## v3.8 add to left_shift_layer &mt LALT LS(SEMI)
 
 ## v3.7 return &mt LSHFT SQT to base layer
