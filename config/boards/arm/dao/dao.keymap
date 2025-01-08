@@ -10,11 +10,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define LSL 1
+#define RT1 1
 #define RSL 2
 #define LT1 3
 #define LT2 4
-#define RT1 5
+#define RT2 5
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -35,30 +35,30 @@
                         /** Эксперимент с &mt LALT TAB - пока очень нравится  */
                         /** TODO: попробовать все таки вернуть &lt LT1 ENTER но установить меньше задержку. 
                                 Да и в целом надо попробовать меньше задержку установить для многих клавиш. Все таки использвать клавишу F было прям удобно 
-                            UPD: отказаался от &lt RT1 ENTER - так как на правом thumb появилось много функциональности и начал путаться. 
-                                 Поэтому сейчас вообще координально убрал &lt RT1 ENTER заменив на -> &lt RT1 AMPS for . in Russion. Ну и вернул &mo LT1 -> &lt LT1 ENTER
+                            UPD: отказаался от &lt RT2 ENTER - так как на правом thumb появилось много функциональности и начал путаться. 
+                                 Поэтому сейчас вообще координально убрал &lt RT2 ENTER заменив на -> &lt RT2 AMPS for . in Russion. Ну и вернул &mo LT1 -> &lt LT1 ENTER
                                  Вообще подумал, что можно базовые стрелки вынести на слой, который буду нажимать левым мизинцем. Там есть Shift. Поэтому можно либо A, либо Ctrl
                         - &mt LSHFT CARET for , in Russian
-                        - &lt RT1 AMPS for . in Russion
+                        - &lt RT2 AMPS for . in Russion
                         - experiment &lt { quick_tap_ms = <100>; } LSHFT CARET - не сработал похоже
                         */
                         bindings = <
-&mt LALT TAB       &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
-&mo LSL            &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
-&mt LCTRL MINUS    &kp Z        &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                         &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &mt LSHFT SPC   &kp LSHFT   &lt RT1 BSPC
+&lt LT2 TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
+&mt LSHFT SPC      &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
+&mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
+                                         &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &mo RT1   &kp LSHFT   &lt RT2 BSPC
                         >;
                 };
                 left_shift_layer {
                         /**
                         1
-                        LSL
+                        RT1
                         По сути один из главных слоев
                                                                                                                                                                                 |
                         */
                         bindings = <
 &kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &none       &kp ENTER    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
-&none       &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
+&kp LSHFT   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
 &trans      &none       &none      &kp ENTER   &kp SPACE       &kp BSPC            &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
                                    &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &trans       &trans
                                                                                                                                                                                 /**/
@@ -100,19 +100,20 @@
                         Управляющие кнопки и движение мышью
                         TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны
                         - &kp LGUI   &kp GRAVE - для переключения между окнами ОДНОЙ рукой.
+                        сейчас добавил сюда левый верхний мизинец. Надо бы это разнести
                                                                                                                                                                                 |
                         */
                         bindings = <
-&trans      &none       &none        &none        &none       &none               &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
+&trans      &kp BSPC    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
 &trans      &none       &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
-&trans      &kp LGUI    &kp GRAVE    &none        &none       &none               &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
+&trans      &kp LGUI    &kp GRAVE    &none        &kp SPC     &kp BSPC            &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
                                      &kp ESC      &kp ENTER   &kp LGUI            &trans    &kp LSHFT   &kp BSPC
                                                                                                                                                                                 /**/
                         >;
                 };
                 right_thumb_layer_1 {
                         /** 
-                        5 RT1
+                        5 RT2
                         Можно сюда управление мышью вынести. 
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, коме Cmd
                                                                                                                                                                                 |
