@@ -10,13 +10,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define LTL 1
-#define LSL 2
-#define RSL 3
-#define LT1 4
-#define LT2 5
-#define RT1 6
-#define RTT 7
+#define LSL 1
+#define RSL 2
+#define LT1 3
+#define LT2 4
+#define RT1 5
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -51,24 +49,9 @@
                                          &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &mt LSHFT SPC   &kp LSHFT   &lt RT1 BSPC
                         >;
                 };
-                left_thumb_layer {
-                        /**
-                        1
-                        LTL
-                        Для чего? Это для нажатия CMD+key
-                                                                                                                                                                                |
-                        */
-                        bindings = <
-&kp LG(TAB)  &kp LG(Q)  &kp LG(W)   &kp LG(E)   &kp LG(R)   &kp LG(T)          &kp LG(Y)   &kp LG(U)   &kp LG(I)       &kp LG(O)     &kp LG(P)      &kp LG(LBKT)
-&kp LSHFT    &kp LG(A)  &kp LG(S)   &kp LG(D)   &kp LG(F)   &kp LG(G)          &kp LG(H)   &kp LG(J)   &kp LG(K)       &kp LG(L)     &kp LG(SEMI)   &kp LG(SQT)
-&kp LCTRL    &kp LG(Z)  &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp LG(B)          &kp LG(N)   &kp LG(M)   &kp LG(COMMA)   &kp LG(DOT)   &kp LG(FSLH)   &kp LG(BSLH)
-                                 &kp LG(DEL)   &kp LG(ENTER)   &none          &trans      &none      &kp LG(BSPC)
-                                                                                                                                                                                /**/
-                        >;
-                };
                 left_shift_layer {
                         /**
-                        2
+                        1
                         LSL
                         По сути один из главных слоев
                                                                                                                                                                                 |
@@ -83,7 +66,7 @@
                 };
                 right_shift_layer {
                         /**
-                        3
+                        2
                         RSL
                         По сути один из главных слоев
                                                                                                                                                                                 |
@@ -98,7 +81,7 @@
                 };
                 left_thumb_layer_1 {
                         /** 
-                        4 LT1
+                        3 LT1
                         Цифры, цифры
                                                                                                                                                                                 |
                          */
@@ -113,7 +96,7 @@
 
                 left_thumb_layer_2 {
                         /**
-                        5 LT2
+                        4 LT2
                         Управляющие кнопки и движение мышью
                         TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны
                         - &kp LGUI   &kp GRAVE - для переключения между окнами ОДНОЙ рукой.
@@ -129,7 +112,7 @@
                 };
                 right_thumb_layer_1 {
                         /** 
-                        6 RT1
+                        5 RT1
                         Можно сюда управление мышью вынести. 
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, коме Cmd
                                                                                                                                                                                 |
@@ -139,21 +122,6 @@
 &kp LSHFT    &kp F6     &kp F7    &kp F8   &kp F9   &kp F10                      &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT      &kp LALT       &none
 &trans       &kp DEL    &kp BSPC  &kp SPC  &kp F11  &kp F12                      &kp ESC    &kp SPC        &kp ENTER      &none          &kp LGUI       &none
                                &kp ESC   &kp ENTER     &kp LGUI            &trans    &kp LSHFT     &kp BSPC
-                                                                                                                                                                                /**/
-                        >;
-                };
-                right_thumb_thumb {
-                        /**
-                        7
-                        RTT
-                        Не используется
-                                                                                                                                                                                |
-                        */
-                        bindings = <
-&kp LALT     &kp LS(Q)    &kp LS(W)    &kp LS(E)    &kp LS(R)    &kp LS(T)              &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
-&kp LSHFT    &kp LS(A)    &kp LS(S)    &kp LS(D)    &kp LS(F)    &kp LS(G)              &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
-&kp LCTRL    &kp LS(Z)    &kp LS(X)    &kp LS(C)    &kp LS(V)    &kp LS(B)              &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)
-                                       &kp DEL      &kp ENTER    &kp LGUI               &trans      &trans       &trans
                                                                                                                                                                                 /**/
                         >;
                 };
