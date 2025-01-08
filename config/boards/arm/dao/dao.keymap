@@ -46,19 +46,22 @@
 &lt LT2 TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
 &mt LSHFT SPC      &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
 &mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                         &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &lt RT1 SPC   &kp LSHFT   &lt RT2 BSPC
+                                             &kp ESC   &lt LT1 ENTER   &kp LGUI           &lt RT1 SPC   &kp LSHFT   &lt RT2 BSPC
                         >;
                 };
-                left_shift_layer {
+                main_right_thumb_layer {
                         /**
                         1
                         RT1
                         По сути один из главных слоев
+                        TODO:
+                        - На самом деле на правом мизинце 3 свободных клавиши еще!!
+                        - Да и на левой руке полно места!!!
                                                                                                                                                                                 |
                         */
                         bindings = <
-&kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
-&kp LSHFT   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
+&kp LALT    &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
+&kp LSHFT   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp BSPC
 &trans      &none       &none      &kp ENTER   &kp SPACE       &kp BSPC            &kp SPC     &kp ENTER    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
                                    &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &trans       &trans
                                                                                                                                                                                 /**/
@@ -105,13 +108,13 @@
                         */
                         bindings = <
 &trans      &kp BSPC    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
-&trans      &none       &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
-&trans      &kp LGUI    &kp GRAVE    &none        &kp SPC     &kp BSPC            &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
+&trans      &kp LGUI    &kp GRAVE    &kp DOWN     &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
+&trans      &none       &none        &none        &none       &none               &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
                                      &kp ESC      &kp ENTER   &kp LGUI            &trans    &kp LSHFT   &kp BSPC
                                                                                                                                                                                 /**/
                         >;
                 };
-                right_thumb_layer_1 {
+                right_thumb_layer_2 {
                         /** 
                         5 RT2
                         Можно сюда управление мышью вынести. 
