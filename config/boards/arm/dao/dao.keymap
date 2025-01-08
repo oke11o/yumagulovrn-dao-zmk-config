@@ -46,7 +46,7 @@
 &lt LT2 TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
 &mt LSHFT SPC      &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
 &mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                         &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &mo RT1   &kp LSHFT   &lt RT2 BSPC
+                                         &lt LT2 ESC   &lt LT1 ENTER   &kp LGUI           &lt RT1 SPC   &kp LSHFT   &lt RT2 BSPC
                         >;
                 };
                 left_shift_layer {
@@ -57,9 +57,9 @@
                                                                                                                                                                                 |
                         */
                         bindings = <
-&kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &none       &kp ENTER    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
+&kp LSHFT   &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
 &kp LSHFT   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LS(SEMI)   &kp LS(SQT)
-&trans      &none       &none      &kp ENTER   &kp SPACE       &kp BSPC            &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
+&trans      &none       &none      &kp ENTER   &kp SPACE       &kp BSPC            &kp SPC     &kp ENTER    &kp LBKT   &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
                                    &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &trans       &trans
                                                                                                                                                                                 /**/
                         >;
