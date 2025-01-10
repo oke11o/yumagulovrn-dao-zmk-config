@@ -47,7 +47,7 @@
 &lt LAL TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
 &mt LSHFT SPC      &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
 &mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                             &kp ESC   &lt LT1 ENTER   &kp LGUI           &mo RT1   &kp SPC   &lt RT2 BSPC
+'                                             &kp ESC   &lt LT1 ENTER   &kp LGUI           &mo RT10   &kp SPC   &lt RT2 BSPC
                         >;
                 }; 
                 main_right_thumb_layer {
@@ -78,23 +78,23 @@
                         TODO:
                         - На самом деле на правом мизинце 3 свободных клавиши еще!!
                         - Да и на левой руке полно места!!!
-                        TODO2:
-                        - а получится ли полностью на этот слой вынести все символы и цифры?
+                        
                                                                                                                                                                                 |
                         */
                         bindings = <
-&kp LALT        &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
-&mt LSHFT SPC   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LBKT       &kp RBKT
-&trans          &none       &none      &none       &none           &none               &kp BSPC    &kp SPC      &kp ENTER  &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
-                                   &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &kp LSHFT       &kp LALT      /*Тут Shift только чтобы MINUS нажимать*/
+&kp HASH        &kp DLLR    &kp N7    &kp N8     &kp N9        &kp N0              &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &kp LS(GRAVE)       &kp GRAVE
+&kp PRCNT       &kp CARET   &kp N4    &kp N5     &kp N6        &kp EXCL            &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LPAR       &kp RPAR
+&kp AMPS        &kp ASTRK   &kp N1    &kp N2     &kp N3        &kp AT              &kp BSPC    &kp SPC      &kp ENTER  &kp PLUS    &mt LGUI LBRC       &kp RBRC
+                                   &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans      &kp LSHFT    &kp LALT      /*Тут Shift только чтобы MINUS нажимать*/
                                                                                                                                                                                 /**/
                         >;
                 };
                 right_shift_layer {
                         /**
-                        3
-                        RSL
-                        По сути один из главных слоев
+                        3 RSL
+                        Цифры, цифры
+                        На самом деле тут левые цифры можно убрать. А сюда например F вынести
+                        
                                                                                                                                                                                 |
                         */
                         bindings = <
