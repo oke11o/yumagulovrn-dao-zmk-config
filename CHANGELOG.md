@@ -1,3 +1,5 @@
+## v6.2 LS(MINUS)
+
 ## v6.1 Error
 
 ## v6.0 Digits and extra to RT10
