@@ -11,10 +11,11 @@
 
 #define DEF 0
 #define RT1 1
-#define RSL 2
-#define LT1 3
-#define LAL 4
-#define RT2 5
+#define RT10 2
+#define RSL 3
+#define LT1 4
+#define LAL 5
+#define RT2 6
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -69,9 +70,29 @@
                                                                                                                                                                                 /**/
                         >;
                 };
-                right_shift_layer {
+                main_right_thumb_layer_0 {
                         /**
                         2
+                        RT10
+                        По сути один из главных слоев
+                        TODO:
+                        - На самом деле на правом мизинце 3 свободных клавиши еще!!
+                        - Да и на левой руке полно места!!!
+                        TODO2:
+                        - а получится ли полностью на этот слой вынести все символы и цифры?
+                                                                                                                                                                                |
+                        */
+                        bindings = <
+&kp LALT        &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
+&mt LSHFT SPC   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LBKT       &kp RBKT
+&trans          &none       &none      &none       &none           &none               &kp BSPC    &kp SPC      &kp ENTER  &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
+                                   &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &kp LSHFT       &kp LALT      /*Тут Shift только чтобы MINUS нажимать*/
+                                                                                                                                                                                /**/
+                        >;
+                };
+                right_shift_layer {
+                        /**
+                        3
                         RSL
                         По сути один из главных слоев
                                                                                                                                                                                 |
@@ -86,7 +107,7 @@
                 };
                 left_thumb_layer_1 {
                         /** 
-                        3 LT1
+                        4 LT1
                         Цифры, цифры
                                                                                                                                                                                 |
                          */
@@ -101,7 +122,7 @@
 
                 left_alt_layer {
                         /**
-                        4 LAL
+                        5 LAL
                         Управляющие кнопки и движение мышью
                         TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны
                         - &kp LGUI   &kp GRAVE - для переключения между окнами ОДНОЙ рукой.
@@ -118,7 +139,7 @@
                 };
                 right_thumb_layer_2 {
                         /** 
-                        5 RT2
+                        6 RT2
                         Можно сюда управление мышью вынести. 
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, коме Cmd
                                                                                                                                                                                 |
