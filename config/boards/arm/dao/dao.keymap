@@ -11,11 +11,10 @@
 
 #define DEF 0
 #define RT1 1
-#define RT10 2
+#define LAF 2
 #define RSL 3
 #define LT1 4
-#define LAL 5
-#define RT2 6
+#define RT2 5
 
 &lt { quick_tap_ms = <90>; };
 &mt { quick_tap_ms = <90>; };
@@ -44,36 +43,16 @@
                         - experiment &lt { quick_tap_ms = <100>; } LSHFT CARET - не сработал похоже
                         */
                         bindings = <
-&lt LAL TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
+&lt LAF TAB        &kp Q        &kp W        &kp E        &kp R        &kp T                &kp Y   &kp U    &kp I        &kp O        &kp P           &kp LBKT
 &mt LSHFT SPC      &kp A        &kp S        &kp D        &kp F        &kp G                &kp H   &kp J    &kp K        &kp L        &kp SEMI        &lt RSL SQT
 &mt LCTRL MINUS    &mt LALT Z   &kp X        &kp C        &kp V        &kp B                &kp N   &kp M    &kp COMMA    &kp DOT      &kp FSLH        &kp BSLH
-                                             &kp ESC   &lt LT1 ENTER   &kp LGUI           &lt RT10 SPC   &kp LS(MINUS)   &lt RT2 BSPC
+                                             &kp ESC   &lt LT1 ENTER   &kp LGUI           &lt RT1 SPC   &kp LS(MINUS)   &lt RT2 BSPC
                         >;
-                }; 
+                };
                 main_right_thumb_layer {
                         /**
                         1
                         RT1
-                        По сути один из главных слоев
-                        TODO:
-                        - На самом деле на правом мизинце 3 свободных клавиши еще!!
-                        - Да и на левой руке полно места!!!
-                        TODO2:
-                        - а получится ли полностью на этот слой вынести все символы и цифры?
-                                                                                                                                                                                |
-                        */
-                        bindings = <
-&kp LALT        &kp EXCL    &kp AT     &kp HASH    &kp DLLR        &kp PRCNT           &kp COLON   &kp EQUAL    &kp LBRC   &kp RBRC    &kp LS(GRAVE)       &kp GRAVE
-&mt LSHFT SPC   &kp CARET   &kp AMPS   &kp LPAR    &kp RPAR        &kp ASTRK           &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LBKT       &kp RBKT
-&trans          &none       &none      &none       &none           &none               &kp BSPC    &kp SPC      &kp ENTER  &kp RBKT    &mt LGUI LS(FSLH)   &kp LS(BSLH)
-                                   &kp DEL     &kp LS(ENTER)   &kp LGUI            &trans     &kp LSHFT       &kp LALT      /*Тут Shift только чтобы MINUS нажимать*/
-                                                                                                                                                                                /**/
-                        >;
-                };
-                main_right_thumb_layer_0 {
-                        /**
-                        2
-                        RT10
                         По сути один из главных слоев
                         TODO:
                         - На самом деле на правом мизинце 3 свободных клавиши еще!!
@@ -86,6 +65,23 @@
 &mt LSHFT PRCNT   &kp CARET   &kp N4    &kp N5     &kp N6        &kp EXCL            &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LPAR       &kp RPAR
 &mt LCTRL AMPS    &kp ASTRK   &kp N1    &kp N2     &kp N3        &kp AT              &kp BSPC    &kp SPC      &kp ENTER  &kp PLUS    &mt LGUI LBRC       &kp RBRC
                                    &kp DEL     &kp LALT   &kp LGUI            &trans      &none    &none
+                                                                                                                                                                                /**/
+                        >;
+                };
+                left_alt_layer {
+                        /**
+                        2 LAF
+                        Управляющие кнопки и движение мышью
+                        TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны
+                        - &kp LGUI   &kp GRAVE - для переключения между окнами ОДНОЙ рукой.
+                        сейчас добавил сюда левый верхний мизинец. Надо бы это разнести
+                                                                                                                                                                                |
+                        */
+                        bindings = <
+&trans      &kp BSPC    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
+&trans      &kp GRAVE   &none        &kp ENTER    &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
+&trans      &none       &none        &none        &none       &kp DEL             &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
+                                     &kp DEL      &kp LALT    &kp LGUI            &trans      &kp LSHFT    &kp BSPC
                                                                                                                                                                                 /**/
                         >;
                 };
@@ -119,27 +115,9 @@
                                                                                                                                                                                 /**/
                         >;
                 };
-
-                left_alt_layer {
-                        /**
-                        5 LAL
-                        Управляющие кнопки и движение мышью
-                        TODO: Сюда можно вынести Ctrl, Alt, Shift, Cmd на обе стороны
-                        - &kp LGUI   &kp GRAVE - для переключения между окнами ОДНОЙ рукой.
-                        сейчас добавил сюда левый верхний мизинец. Надо бы это разнести
-                                                                                                                                                                                |
-                        */
-                        bindings = <
-&trans      &kp BSPC    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
-&trans      &kp GRAVE   &none        &kp ENTER    &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
-&trans      &none       &none        &none        &none       &kp DEL             &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
-                                     &kp DEL      &kp LALT    &kp LGUI            &trans      &kp LSHFT    &kp BSPC
-                                                                                                                                                                                /**/
-                        >;
-                };
                 right_thumb_layer_2 {
                         /** 
-                        6 RT2
+                        5 RT2
                         Можно сюда управление мышью вынести. 
                         Тут важно иметь Ctrl, Alt, Shift, Cmd, чтобы нажимать их с F.. И в целом они есть, коме Cmd
                                                                                                                                                                                 |
