@@ -1,3 +1,5 @@
+## v6.5 Small fix main_right_thumb_layer_0
+
 ## v6.4 Revert &lt RT10 SPC
 
 ## v6.3 &lt RT2 SPC
