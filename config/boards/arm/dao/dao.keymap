@@ -61,8 +61,8 @@
                                                                                                                                                                                 |
                         */
                         bindings = <
-&kp HASH          &kp DLLR    &kp N7    &kp N8     &kp N9        &kp N0              &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &kp LS(GRAVE)       &kp GRAVE
-&mt LSHFT PRCNT   &kp CARET   &kp N4    &kp N5     &kp N6        &kp EXCL            &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LPAR       &kp RPAR
+&kp HASH          &kp DLLR    &kp N7    &kp N8     &kp N9        &kp EXCL            &kp COLON   &kp EQUAL    &kp LBKT   &kp RBKT    &kp LS(GRAVE)       &kp GRAVE
+&mt LSHFT PRCNT   &kp CARET   &kp N4    &kp N5     &kp N6        &kp N0              &kp LEFT    &kp DOWN     &kp UP     &kp RIGHT   &mt LALT LPAR       &kp RPAR
 &mt LCTRL AMPS    &kp ASTRK   &kp N1    &kp N2     &kp N3        &kp AT              &kp BSPC    &kp SPC      &kp ENTER  &kp PLUS    &mt LGUI LBRC       &kp RBRC
                                    &kp DEL     &kp LALT   &kp LGUI            &trans      &none    &none
                                                                                                                                                                                 /**/
@@ -79,7 +79,7 @@
                         */
                         bindings = <
 &trans      &kp BSPC    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
-&trans      &kp GRAVE   &none        &kp ENTER    &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
+&trans      &kp LGUI    &kp GRAVE    &kp ENTER    &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
 &trans      &none       &none        &none        &none       &kp DEL             &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
                                      &kp DEL      &kp LALT    &kp LGUI            &trans      &kp LSHFT    &kp BSPC
                                                                                                                                                                                 /**/

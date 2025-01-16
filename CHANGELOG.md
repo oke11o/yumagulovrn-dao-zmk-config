@@ -1,3 +1,8 @@
+## v6.7 
+
+- Return &kp LGUI &kp GRAVE to left_alt_layer
+- Change &kp EXCL and &kp N0 on main_right_thumb_layer
+
 ## v6.6 Reorganise layers
 
 ## v6.5 Small fix main_right_thumb_layer_0
