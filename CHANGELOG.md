@@ -1,3 +1,5 @@
+## v6.9 alt layout small fix
+
 ## v6.8 &mt LALT X
 
 ## v6.7 
