@@ -108,10 +108,10 @@
                                                                                                                                                                                 |
                          */
                         bindings = <
-&kp LALT     &none      &kp N7    &kp N8     &kp N9      &none             &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp KP_ASTERISK   &kp SLASH
-&kp LSHFT    &none      &kp N4    &kp N5     &kp N6      &kp N0            &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS          &kp MINUS
-&kp LCTRL    &kp LGUI   &kp N1    &kp N2     &kp N3      &kp BSPC          &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA         &kp DOT
-                                  &kp DEL    &kp ENTER   &kp LGUI          &trans       &kp LSHFT   &kp BSPC
+&kp HASH          &kp DLLR    &kp N7    &kp N8     &kp N9        &kp EXCL            &kp EQUAL    &kp N7      &kp N8     &kp N9      &kp KP_ASTERISK   &kp SLASH
+&mt LSHFT PRCNT   &kp CARET   &kp N4    &kp N5     &kp N6        &kp N0              &kp N0       &kp N4      &kp N5     &kp N6      &kp PLUS          &kp MINUS
+&mt LCTRL AMPS    &kp ASTRK   &kp N1    &kp N2     &kp N3        &kp AT              &kp COLON    &kp N1      &kp N2     &kp N3      &kp COMMA         &kp DOT
+                                  &kp DEL    &kp ENTER   &mo LT1          &trans       &kp LSHFT   &kp BSPC
                                                                                                                                                                                 /**/
                         >;
                 };

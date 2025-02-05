@@ -1,3 +1,5 @@
+## v6.12 left_thumb_layer_1 like left_alt_layer
+
 ## v6.11 change left_alt_layer
 
 ## v6.10 lt LAF A
