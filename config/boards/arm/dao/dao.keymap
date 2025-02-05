@@ -78,10 +78,10 @@
                                                                                                                                                                                 |
                         */
                         bindings = <
-&trans      &kp LGUI    &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
-&trans      &none       &kp GRAVE    &kp ENTER    &kp SPC     &kp BSPC            &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
-&trans      &none       &none        &none        &none       &kp DEL             &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)                                                                       
-                                     &kp DEL      &kp LALT    &kp LGUI            &trans      &kp LSHFT    &kp BSPC
+&trans      &none       &kp LGUI     &kp GRAVE    &none       &kp DEL             &kp LS(Y)   &kp LS(U)    &kp LS(I)        &kp LS(O)        &kp LS(P)           &kp LS(LBKT)
+&trans      &none       &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT           &kp LS(H)   &kp LS(J)    &kp LS(K)        &kp LS(L)        &kp LS(SEMI)        &kp LS(SQT)
+&trans      &none       &none        &kp ENTER    &kp SPC     &kp BSPC            &kp LS(N)   &kp LS(M)    &kp LS(COMMA)    &kp LS(DOT)      &kp LS(FSLH)        &kp LS(BSLH)
+                                     &kp LSHFT    &kp LALT    &kp LGUI            &trans      &kp LSHFT    &kp BSPC
                                                                                                                                                                                 /**/
                         >;
                 };

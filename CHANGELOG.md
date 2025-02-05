@@ -1,4 +1,6 @@
-# v6.10 lt LAF A
+## v6.11 change left_alt_layer
+
+## v6.10 lt LAF A
 
 ## v6.9 alt layout small fix
 
