@@ -1,3 +1,5 @@
+## v6.14 quick_tap_ms = 200
+
 ## v6.13 &mt LALT C
 
 ## v6.12 left_thumb_layer_1 like left_alt_layer

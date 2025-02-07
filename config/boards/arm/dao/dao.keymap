@@ -16,8 +16,8 @@
 #define LT1 4
 #define RT2 5
 
-&lt { quick_tap_ms = <90>; };
-&mt { quick_tap_ms = <90>; };
+&lt { quick_tap_ms = <200>; };
+&mt { quick_tap_ms = <200>; };
 
 / {
     chosen {
