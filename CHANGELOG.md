@@ -1,3 +1,5 @@
+## v6.15 remove alt
+
 ## v6.14 quick_tap_ms = 200
 
 ## v6.13 &mt LALT C
